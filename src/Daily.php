@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Cooper;
 
-use Cooper\DTO\Sentence;
 use Cooper\Requests\GetSentence;
 use ReflectionException;
 use Saloon\Contracts\Response;
@@ -50,22 +49,10 @@ class Daily extends Connector
      * @throws InvalidResponseClassException
      * @throws PendingRequestException
      */
-    public function getSentence(string $title = null): Response
+    public function getSentence(?string $title = null): Response
     {
         $title = $title ?: date('Y-m-d');
 
         return $this->send(new GetSentence($title));
-    }
-
-    /**
-     * @param string|null $title
-     * @return mixed
-     * @throws InvalidResponseClassException
-     * @throws PendingRequestException
-     * @throws ReflectionException
-     */
-    public function getSentenceDTO(string $title = null): Sentence
-    {
-        return $this->getSentence($title)->dto();
     }
 }

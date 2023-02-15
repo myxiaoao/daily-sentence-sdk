@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Cooper\DTO;
 
 use Saloon\Contracts\DataObjects\WithResponse;
@@ -14,7 +16,7 @@ class Sentence implements WithResponse
         public string $english,
         public string $chinese,
         public string $date,
-        public string $video,
+        public string $audio,
         public array $banner,
     ) {
     }

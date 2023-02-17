@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cooper\Responses;
+namespace Cooper\Daily\Responses;
 
 use Saloon\Http\Response;
 

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use Cooper\Daily;
-use Cooper\Responses\DailyResponse;
+use Cooper\Daily\DailyConnector;
+use Cooper\Daily\Responses\DailyResponse;
 
 test('can retrieve sentence from the api', function () {
-    $daily = new Daily();
+    $daily = new DailyConnector();
     $daily->withMockClient(mockClient());
 
     $response = $daily->getSentence();
@@ -15,7 +15,7 @@ test('can retrieve sentence from the api', function () {
 });
 
 test('sentence title eq response date', function () {
-    $daily = new Daily();
+    $daily = new DailyConnector();
     $date = date('Y-m-d');
     $response = $daily->getSentence($date)->dto();
 

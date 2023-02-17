@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Cooper;
+namespace Cooper\Daily;
 
-use Cooper\Requests\GetSentence;
+use Cooper\Daily\Requests\GetSentence;
 use ReflectionException;
 use Saloon\Contracts\Response;
 use Saloon\Exceptions\InvalidResponseClassException;
 use Saloon\Exceptions\PendingRequestException;
 use Saloon\Http\Connector;
-use Cooper\Responses\DailyResponse;
+use Cooper\Daily\Responses\DailyResponse;
 
-class Daily extends Connector
+class DailyConnector extends Connector
 {
     /**
      * @var string|null

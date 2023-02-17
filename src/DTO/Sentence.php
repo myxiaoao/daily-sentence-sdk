@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cooper\DTO;
+namespace Cooper\Daily\DTO;
 
 use Saloon\Contracts\DataObjects\WithResponse;
 use Saloon\Contracts\Response;

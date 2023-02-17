@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Cooper\Requests;
+namespace Cooper\Daily\Requests;
 
-use Cooper\DTO\Sentence;
+use Cooper\Daily\DTO\Sentence;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Contracts\Response;
 use Saloon\Enums\Method;
